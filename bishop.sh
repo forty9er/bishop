@@ -26,7 +26,7 @@ function red() {
     echo -ne "${red}"
 }
 
-function clear() {
+function no_colour() {
     echo -ne "${no_colour}"
 }
 
@@ -34,7 +34,7 @@ function _bishop() {
     if [ $1 == "upgrade" ]; then
         blue
         echo "Upgrading bishop..."
-        clear
+        no_colour
         currentDir=$(pwd)
         cd `_currentRunningDirectory`
         curl -H 'Cache-Control: no-cache' -# https://raw.githubusercontent.com/stuartervine/bishop/master/bishop.sh > bishop.sh
